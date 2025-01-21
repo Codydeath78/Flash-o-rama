@@ -1,0 +1,21 @@
+{
+  "functions": [
+    {
+      "source": "functions",
+      "timeoutSeconds": 300,
+      "runtime": "nodejs22",
+      "run": {
+        "eventType": "google.cloud.pubsub.topic.v2.messagePublished",
+        "maxInstances": 10
+      },
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ]
+}
