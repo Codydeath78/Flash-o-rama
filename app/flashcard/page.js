@@ -28,6 +28,7 @@ export default function Flashcard() {
     const router = useRouter();
     const cardRefs = useRef([]); // Array to store references to each card
 
+    //hawk1
 
     const generatePDF = () => {
         const doc = new jsPDF();
