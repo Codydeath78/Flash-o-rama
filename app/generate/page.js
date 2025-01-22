@@ -7,6 +7,8 @@ import {useUser} from '@clerk/nextjs'
 import { db } from "@/firebase"
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
+import { setLogLevel } from "firebase/firestore";
+setLogLevel("debug");
 
 export default function Generate(){
     const {isLoaded, isSignedIn, user} = useUser()

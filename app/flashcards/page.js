@@ -8,6 +8,8 @@ import { Container, Grid, Card, CardActionArea, CardContent, Typography, TextFie
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import Tooltip from '@mui/material/Tooltip';
+import { setLogLevel } from "firebase/firestore";
+setLogLevel("debug");
 
 export default function FlashcardsPage() {
     const { isLoaded, isSignedIn, user } = useUser();
