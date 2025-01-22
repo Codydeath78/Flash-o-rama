@@ -16,6 +16,7 @@ import { Brightness4, Brightness7} from '@mui/icons-material'; // Icons for dark
 import IconButton from '@mui/material/IconButton';
 setLogLevel('debug');
 //FRONTEND YES SIR!
+//hawk two: what?
 
 export default function Home() {
   const router = useRouter();
