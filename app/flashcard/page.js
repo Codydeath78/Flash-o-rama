@@ -12,6 +12,7 @@ import { jsPDF } from 'jspdf';
 //THOSE WHO KNOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //LOCK IN!
 //AI THIS!
+//PLEASE DEPLOY!
 
 export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser();
