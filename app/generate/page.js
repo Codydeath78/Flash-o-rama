@@ -179,6 +179,10 @@ export default function Generate(){
             const userData = userDocSnap.data();
         
         // Count the current number of sets directly from Firestore
+        if (!db || !user || !user.id) {
+            console.error("Database or User ID is not initialized.");
+            return;
+        }
         const cardSetsQuery = collection(db, `cardstorage/${user.id}/cards`);
         const cardSetsSnapshot = await getDocs(cardSetsQuery);
         const currentSetCount = cardSetsSnapshot.size;  // Count existing sets
@@ -203,7 +207,11 @@ export default function Generate(){
             });
 
             // Update cardCount based on actual set count
-        await setDoc(userDocRef, { cardCount: currentSetCount + 1 }, { merge: true });
+            if (!userDocRef) {
+                console.error("Invalid user document reference.");
+                return;
+            }
+            await setDoc(userDocRef, { cardCount: currentSetCount + 1 }, { merge: true });
         
             alert('Flashcard set saved successfully!');
             setSetName('');

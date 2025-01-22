@@ -77,6 +77,10 @@ useEffect(() => {
 
 
                 // Fetch all flashcard sets for the logged-in user
+                if (!db || !user || !user.id) {
+                    console.error("Database or User ID is not initialized.");
+                    return;
+                }
                 const colRef = collection(db, `cardstorage/${user.id}/cards`);
                 const querySnapshot = await getDocs(colRef);
 
@@ -111,9 +115,17 @@ useEffect(() => {
 
         try {
             // Delete the selected flashcard set
+            if (!selectedSet) {
+                console.error("No set selected for deletion.");
+                return;
+            }
             await deleteDoc(doc(db, `cardstorage/${user.id}/cards`, selectedSet));
 
             // Query Firestore for the remaining flashcard sets
+            if (!db || !user || !user.id) {
+                console.error("Database or User ID is not initialized.");
+                return;
+            }
         const cardSetsQuery = collection(db, `cardstorage/${user.id}/cards`);
         const cardSetsSnapshot = await getDocs(cardSetsQuery);
         const newSetCount = cardSetsSnapshot.size;
