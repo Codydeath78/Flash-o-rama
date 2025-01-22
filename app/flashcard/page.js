@@ -198,40 +198,7 @@ export default function Flashcard() {
 useEffect(() => {
     activeIndexRef.current = activeIndex;
 }, [activeIndex]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
     // Fetch flashcards and user subscription details
     useEffect(() => {
         async function getFlashcard() {

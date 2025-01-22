@@ -15,7 +15,7 @@ import { useThemeContext } from '@/app/toggle_theme/theme-context.js'; // Adjust
 import { Brightness4, Brightness7} from '@mui/icons-material'; // Icons for dark mode toggle
 import IconButton from '@mui/material/IconButton';
 setLogLevel('debug');
-//FRONTEND
+//FRONTEND YES SIR!
 
 export default function Home() {
   const router = useRouter();
