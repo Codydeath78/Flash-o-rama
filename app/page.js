@@ -17,6 +17,7 @@ import IconButton from '@mui/material/IconButton';
 setLogLevel('debug');
 //FRONTEND YES SIR!
 //hawk two: what?
+// hawk three: good moring!
 
 export default function Home() {
   const router = useRouter();
