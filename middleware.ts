@@ -1,5 +1,5 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
-
+//maybe outdate?
 export default clerkMiddleware();
 
 export const config = {
