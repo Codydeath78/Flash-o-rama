@@ -11,6 +11,7 @@ import { jsPDF } from 'jspdf';
 //import annyang from 'annyang'; // Import annyang for voice commands, this causes error
 //THOSE WHO KNOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //LOCK IN!
+//AI THIS!
 
 export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser();
