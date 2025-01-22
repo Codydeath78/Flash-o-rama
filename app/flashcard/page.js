@@ -8,12 +8,9 @@ import { Container, Typography, Box, CardActionArea, CardContent, Grid, Button }
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import { jsPDF } from 'jspdf';
-//import annyang from 'annyang'; // Import annyang for voice commands, this causes error
-//THOSE WHO KNOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//LOCK IN!
-//AI THIS!
-//PLEASE DEPLOY!
-//SCREAM!
+//hawk
+
+
 
 export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser();
