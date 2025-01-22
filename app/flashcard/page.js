@@ -8,10 +8,6 @@ import { Container, Typography, Box, CardActionArea, CardContent, Grid, Button }
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import { jsPDF } from 'jspdf';
-//hawk two
-//fresbfjesbfek
-
-
 
 export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser();
@@ -242,8 +238,15 @@ useEffect(() => {
             if (!search || !user) return;
 
             try {
+                
+                if (!user?.id || !search) { //debug test
+                    console.error("Invalid user ID or search parameter.");
+                    return;
+                } //debug test
                 setLoading(true);
                 const docRef = doc(db, `cardstorage/${user.id}/cards`, search);
+                console.log("Firestore Path:", `cardstorage/${user.id}/cards`, search); //debug
+                console.log("Firestore instance:", db); //debug test
                 const docSnap = await getDoc(docRef);
 
                 if (docSnap.exists()) {
