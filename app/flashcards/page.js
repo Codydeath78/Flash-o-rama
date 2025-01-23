@@ -79,10 +79,12 @@ useEffect(() => {
 
 
                 // Fetch all flashcard sets for the logged-in user
+                console.log('db:', db, 'user.id:', user?.id);
                 if (!db || !user || !user.id) {
                     console.error("Database or User ID is not initialized.");
                     return;
                 }
+                console.log(`Fetching from path: cardstorage/${user.id}/cards`);
                 const colRef = collection(db, `cardstorage/${user.id}/cards`);
                 const querySnapshot = await getDocs(colRef);
 
@@ -119,6 +121,10 @@ useEffect(() => {
             // Delete the selected flashcard set
             if (!selectedSet) {
                 console.error("No set selected for deletion.");
+                return;
+            }
+            if (!db || !user || !user.id) {
+                console.error("Database or User ID is not initialized.");
                 return;
             }
             await deleteDoc(doc(db, `cardstorage/${user.id}/cards`, selectedSet));

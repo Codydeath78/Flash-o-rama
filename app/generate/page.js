@@ -181,10 +181,12 @@ export default function Generate(){
             const userData = userDocSnap.data();
         
         // Count the current number of sets directly from Firestore
+        console.log('db:', db, 'user.id:', user?.id);
         if (!db || !user || !user.id) {
             console.error("Database or User ID is not initialized.");
             return;
         }
+        console.log(`Fetching from path: cardstorage/${user.id}/cards`);
         const cardSetsQuery = collection(db, `cardstorage/${user.id}/cards`);
         const cardSetsSnapshot = await getDocs(cardSetsQuery);
         const currentSetCount = cardSetsSnapshot.size;  // Count existing sets
