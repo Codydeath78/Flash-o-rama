@@ -166,7 +166,20 @@ export default function Generate(){
             alert('Please log in to save flashcards.');
             return;
           }
-        
+        ////test////
+          console.log("User ID:", user.id);
+          const cardSetsQuery = collection(db, `cardstorage/${user.id}/cards`);
+          console.log("Firestore instance:", db);
+          console.log("Collection path:", `cardstorage/${user.id}/cards`);
+      
+          const cardSetsSnapshot = await getDocs(cardSetsQuery);
+          const currentSetCount = cardSetsSnapshot.size;
+      
+          console.log("Current flashcard set count:", currentSetCount);
+        ////test////
+
+
+
           if (!setName || typeof setName !== 'string') {
             alert('Please enter a valid name for your flashcard set.');
             return;

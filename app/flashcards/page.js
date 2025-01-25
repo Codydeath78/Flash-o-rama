@@ -88,6 +88,9 @@ useEffect(() => {
                 }
                 console.log(`Fetching from path: cardstorage/${user.id}/cards`);
                 const colRef = collection(db, `cardstorage/${user.id}/cards`);
+                 // Debug: Check Firestore instance and collection path
+                console.log("Firestore instance:", db);
+                console.log("Collection path:", `cardstorage/${user.id}/cards`);
                 const querySnapshot = await getDocs(colRef);
 
                 const sets = [];
