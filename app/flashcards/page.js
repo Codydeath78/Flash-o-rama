@@ -1,14 +1,13 @@
 'use client';
 import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
-import { collection, getDocs, doc, deleteDoc, updateDoc, increment, getDoc } from "firebase/firestore";
-import { db } from '@/firebase';
+import { collection, getDocs, doc, deleteDoc, updateDoc, increment, getDoc, setLogLevel, getFirestore } from "firebase/firestore";
+//import { db } from '@/firebase';
 import { useRouter } from "next/navigation";
 import { Container, Grid, Card, CardActionArea, CardContent, Typography, TextField, CircularProgress, Button, Box } from '@mui/material';
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import Tooltip from '@mui/material/Tooltip';
-import { setLogLevel } from "firebase/firestore";
 setLogLevel("debug");
 
 export default function FlashcardsPage() {
@@ -23,6 +22,7 @@ export default function FlashcardsPage() {
     const [cardCount, setCardCount] = useState(0);
     const { mode, toggleTheme } = useThemeContext();
     const router = useRouter();
+    const db = getFirestore();
 
 //jhawlfnesfesejkfnewnfe
 //ejnfjkoe

@@ -6,10 +6,9 @@ import { AppBar, Container, Toolbar, Typography, Button, Box, Grid, CircularProg
 import Head from "next/head";
 import { useRouter } from "next/navigation";
 import { useUser } from '@clerk/nextjs';
-import { setLogLevel } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { db } from '@/firebase'; // Import your Firestore configuration
-import { doc, updateDoc, setDoc, getDoc, onSnapshot } from 'firebase/firestore';
+import { doc, updateDoc, setDoc, getDoc, onSnapshot, setLogLevel } from 'firebase/firestore';
 import Tooltip from '@mui/material/Tooltip';
 import { useThemeContext } from '@/app/toggle_theme/theme-context.js'; // Adjust path if needed
 import { Brightness4, Brightness7} from '@mui/icons-material'; // Icons for dark mode toggle
