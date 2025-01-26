@@ -26,7 +26,7 @@ export default function FlashcardsPage() {
 
 //jhawlfnesfesejkfnewnfe
 //ejnfjkoe
-
+//i can't stand this anymore!
 //esjnfesfns
 //bbbbb
 //hawk two!!!!!!!!!!!!!!!!!!!!!!!!
