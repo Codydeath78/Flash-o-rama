@@ -27,7 +27,7 @@ export default function Generate(){
 
     const router = useRouter()
     const cardRefs = useRef([]); // Store references to the flashcards
-    const db = getFirestore();
+    const db = getFirestore(app);
 
     useEffect(() => {
         // Scroll the active card into view whenever it changes

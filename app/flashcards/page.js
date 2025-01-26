@@ -22,7 +22,7 @@ export default function FlashcardsPage() {
     const [cardCount, setCardCount] = useState(0);
     const { mode, toggleTheme } = useThemeContext();
     const router = useRouter();
-    const db = getFirestore();
+    const db = getFirestore(app);
 
 //jhawlfnesfesejkfnewnfe
 //ejnfjkoe
