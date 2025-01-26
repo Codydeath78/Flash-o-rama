@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"
 import {useState, setSetName, useEffect, useRef} from 'react'
 import {Button, Container, TextField, Typography, Box, Paper, CardActionArea, CardContent, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Grid, CircularProgress} from '@mui/material'
 import {useUser} from '@clerk/nextjs'
-//import { db } from "@/firebase"
+import { db } from "@/firebase"
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 setLogLevel("debug");
@@ -27,7 +27,7 @@ export default function Generate(){
 
     const router = useRouter()
     const cardRefs = useRef([]); // Store references to the flashcards
-    const db = getFirestore(app);
+    //const db = getFirestore();
 
     useEffect(() => {
         // Scroll the active card into view whenever it changes

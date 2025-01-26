@@ -2,7 +2,7 @@
 import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import { collection, getDocs, doc, deleteDoc, updateDoc, increment, getDoc, setLogLevel, getFirestore } from "firebase/firestore";
-//import { db } from '@/firebase';
+import { db } from '@/firebase';
 import { useRouter } from "next/navigation";
 import { Container, Grid, Card, CardActionArea, CardContent, Typography, TextField, CircularProgress, Button, Box } from '@mui/material';
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
@@ -22,8 +22,9 @@ export default function FlashcardsPage() {
     const [cardCount, setCardCount] = useState(0);
     const { mode, toggleTheme } = useThemeContext();
     const router = useRouter();
-    const db = getFirestore(app);
+    //const db = getFirestore();
 
+//enlsfggggg
 //jhawlfnesfesejkfnewnfe
 //ejnfjkoe
 //i can't stand this anymore!
