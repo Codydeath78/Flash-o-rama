@@ -7,6 +7,7 @@ import {useUser} from '@clerk/nextjs'
 import { db } from "@/firebase"
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
+import { CollectionReference } from "firebase-admin/firestore";
 setLogLevel("debug");
 console.log(`$firestore instanceof Firestore: ${Firestore instanceof Firestore}`);
 export default function Generate(){
@@ -154,15 +155,15 @@ export default function Generate(){
             return;
           }
         ////test////
-          //console.log("User ID:", user.id);
-          //const cardSetsQuery = collection(db, `cardstorage/${user.id}/cards`);
-          //console.log("Firestore instance:", db);
-          //console.log("Collection path:", `cardstorage/${user.id}/cards`);
+          console.log("User ID:", user.id);
+          const cardSetsQuery = collection(db, `cardstorage/${user.id}/cards`);
+          console.log("Firestore instance:", db);
+          console.log("Collection path:", `cardstorage/${user.id}/cards`);
       
-          //const cardSetsSnapshot = await getDocs(cardSetsQuery);
-          //const currentSetCount = cardSetsSnapshot.size;
+          const cardSetsSnapshot = await getDocs(cardSetsQuery);
+          const currentSetCount = cardSetsSnapshot.size;
       
-          //console.log("Current flashcard set count:", currentSetCount);
+          console.log("Current flashcard set count:", currentSetCount);
         ////test////
 
 
