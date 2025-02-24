@@ -1,7 +1,7 @@
 'use client';
 import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
-import { collection, getDocs, doc, deleteDoc, updateDoc, increment, getDoc, setLogLevel, getFirestore } from "firebase/firestore";
+import { collection, getDocs, doc, deleteDoc, updateDoc, increment, getDoc, setLogLevel, getFirestore, Firestore } from "firebase/firestore";
 import { db } from '@/firebase';
 import { useRouter } from "next/navigation";
 import { Container, Grid, Card, CardActionArea, CardContent, Typography, TextField, CircularProgress, Button, Box } from '@mui/material';
@@ -9,7 +9,7 @@ import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import Tooltip from '@mui/material/Tooltip';
 setLogLevel("debug");
-
+console.log(`$firestore instanceof Firestore: ${Firestore instanceof Firestore}`);
 export default function FlashcardsPage() {
     const { isLoaded, isSignedIn, user } = useUser();
     const [flashcardSets, setFlashcardSets] = useState([]); //All sets
@@ -34,6 +34,8 @@ export default function FlashcardsPage() {
 //hawk 33!!!!!!!!!!!!!!!!!!
 //hawk four!!!!!!!!!!!!!!!!!!!
 ///////////////////////////////////////////////////////////////////////////////
+//TS PMO!!!!!!!!!!!!!!!!!!!!!
+// ICL TS PMO!
 // Fetch initial flashcard sets
 useEffect(() => {
     const fetchFlashcardSets = async () => {

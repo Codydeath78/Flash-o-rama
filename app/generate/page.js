@@ -1,5 +1,5 @@
 'use client';
-import { writeBatch, doc, collection, getDoc, setDoc, serverTimestamp, deleteDoc, updateDoc, increment, getDocs, setLogLevel, getFirestore } from "firebase/firestore";
+import { writeBatch, doc, collection, getDoc, setDoc, serverTimestamp, deleteDoc, updateDoc, increment, getDocs, setLogLevel, getFirestore, Firestore } from "firebase/firestore";
 import { useRouter } from "next/navigation"
 import {useState, setSetName, useEffect, useRef} from 'react'
 import {Button, Container, TextField, Typography, Box, Paper, CardActionArea, CardContent, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Grid, CircularProgress} from '@mui/material'
@@ -8,7 +8,7 @@ import { db } from "@/firebase"
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 setLogLevel("debug");
-
+console.log(`$firestore instanceof Firestore: ${Firestore instanceof Firestore}`);
 export default function Generate(){
     const {isLoaded, isSignedIn, user} = useUser()
     const [flashcards, setFlashcards] = useState([])
