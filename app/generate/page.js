@@ -91,19 +91,6 @@ export default function Generate(){
         fetchSubscriptionType();
     }, [user]);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     const handleSubmit=async () => {
 
         if (!text.trim()){
@@ -167,15 +154,15 @@ export default function Generate(){
             return;
           }
         ////test////
-          console.log("User ID:", user.id);
-          const cardSetsQuery = collection(db, `cardstorage/${user.id}/cards`);
-          console.log("Firestore instance:", db);
-          console.log("Collection path:", `cardstorage/${user.id}/cards`);
+          //console.log("User ID:", user.id);
+          //const cardSetsQuery = collection(db, `cardstorage/${user.id}/cards`);
+          //console.log("Firestore instance:", db);
+          //console.log("Collection path:", `cardstorage/${user.id}/cards`);
       
-          const cardSetsSnapshot = await getDocs(cardSetsQuery);
-          const currentSetCount = cardSetsSnapshot.size;
+          //const cardSetsSnapshot = await getDocs(cardSetsQuery);
+          //const currentSetCount = cardSetsSnapshot.size;
       
-          console.log("Current flashcard set count:", currentSetCount);
+          //console.log("Current flashcard set count:", currentSetCount);
         ////test////
 
 
