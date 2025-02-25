@@ -7,7 +7,6 @@ import {useUser} from '@clerk/nextjs'
 import { db } from "@/firebase"
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
-import { CollectionReference } from "firebase-admin/firestore";
 setLogLevel("debug");
 console.log(`$firestore instanceof Firestore: ${Firestore instanceof Firestore}`);
 export default function Generate(){

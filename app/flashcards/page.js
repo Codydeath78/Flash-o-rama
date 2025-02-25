@@ -23,7 +23,7 @@ export default function FlashcardsPage() {
     const { mode, toggleTheme } = useThemeContext();
     const router = useRouter();
     //const db = getFirestore();
-
+//did that fix the problem?
 //enlsfggggg
 //jhawlfnesfesejkfnewnfe
 //ejnfjkoe
