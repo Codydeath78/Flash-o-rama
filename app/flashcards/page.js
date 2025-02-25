@@ -23,6 +23,8 @@ export default function FlashcardsPage() {
     const { mode, toggleTheme } = useThemeContext();
     const router = useRouter();
     //const db = getFirestore();
+    //will crash out
+    //frfrfrf
 //did that fix the problem?
 //enlsfggggg
 //jhawlfnesfesejkfnewnfe
@@ -96,7 +98,7 @@ useEffect(() => {
                     return;
                 }
                 console.log(`Fetching from path: cardstorage/${user.id}/cards`);
-                const colRef = collection(db, `cardstorage/${user.id}/cards`);
+                const colRef = collection(db,`cardstorage/${user.id}/cards`);
                  // Debug: Check Firestore instance and collection path
                 console.log("Firestore instance:", db);
                 console.log("Collection path:", `cardstorage/${user.id}/cards`);
@@ -148,7 +150,7 @@ useEffect(() => {
                 console.error("Database or User ID is not initialized.");
                 return;
             }
-        const cardSetsQuery = collection(db, `cardstorage/${user.id}/cards`);
+        const cardSetsQuery = collection(db,`cardstorage/${user.id}/cards`);
         const cardSetsSnapshot = await getDocs(cardSetsQuery);
         const newSetCount = cardSetsSnapshot.size;
 
