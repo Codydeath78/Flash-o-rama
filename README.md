@@ -1,6 +1,6 @@
 ## WELCOME TO FLASH-O-RAMA
 
-In this SAS application, you can create flashcards just by writing a prompt to AI and AI will do all the work by making flashcards so you can have study flashcards for exams, tests, or quizzes. In addition, this application isn't limited to an educational setting, you can use the AI to make any type of set of flashcards you desire to learn something new or explore subjects and ideas to further enhance your understanding of the world.
+In this SAAS application, you can create flashcards just by writing a prompt to AI and AI will do all the work by making flashcards so you can have study flashcards for exams, tests, or quizzes. In addition, this application isn't limited to an educational setting, you can use the AI to make any type of set of flashcards you desire to learn something new or explore subjects and ideas to further enhance your understanding of the world.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
