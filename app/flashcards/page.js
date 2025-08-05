@@ -24,7 +24,16 @@ export default function FlashcardsPage() {
     const router = useRouter();
     //const db = getFirestore();
 
-//test for next laptop.
+//enlsfggggg
+//jhawlfnesfesejkfnewnfe
+//ejnfjkoe
+//i can't stand this anymore!
+//esjnfesfns
+//bbbbb
+//hawk two!!!!!!!!!!!!!!!!!!!!!!!!
+//hawk 33!!!!!!!!!!!!!!!!!!
+//hawk four!!!!!!!!!!!!!!!!!!!
+///////////////////////////////////////////////////////////////////////////////
 // Fetch initial flashcard sets
 useEffect(() => {
     const fetchFlashcardSets = async () => {
@@ -84,7 +93,7 @@ useEffect(() => {
                     return;
                 }
                 console.log(`Fetching from path: cardstorage/${user.id}/cards`);
-                const colRef = collection(db, `cardstorage/${user.id}/cards`);
+                const colRef = collection(db,`cardstorage/${user.id}/cards`);
                  // Debug: Check Firestore instance and collection path
                 console.log("Firestore instance:", db);
                 console.log("Collection path:", `cardstorage/${user.id}/cards`);
@@ -136,7 +145,7 @@ useEffect(() => {
                 console.error("Database or User ID is not initialized.");
                 return;
             }
-        const cardSetsQuery = collection(db, `cardstorage/${user.id}/cards`);
+        const cardSetsQuery = collection(db,`cardstorage/${user.id}/cards`);
         const cardSetsSnapshot = await getDocs(cardSetsQuery);
         const newSetCount = cardSetsSnapshot.size;
 
