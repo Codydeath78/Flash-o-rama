@@ -34,6 +34,7 @@ export default function FlashcardsPage() {
 //hawk 33!!!!!!!!!!!!!!!!!!
 //hawk four!!!!!!!!!!!!!!!!!!!
 ///////////////////////////////////////////////////////////////////////////////
+//I will work on this project later. soon.
 // Fetch initial flashcard sets
 useEffect(() => {
     const fetchFlashcardSets = async () => {
