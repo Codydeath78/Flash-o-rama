@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/firebase": ["./firebase.js"]
+      "@/*": ["./*"]
     },
     "checkJs": false  // Disable JS type checking
   }

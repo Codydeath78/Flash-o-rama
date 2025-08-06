@@ -1,5 +1,5 @@
 import sendgrid from '@sendgrid/mail';
-import { db } from '@/firebase';
+import { db } from '@/utils/firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);

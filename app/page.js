@@ -7,7 +7,7 @@ import Head from "next/head";
 import { useRouter } from "next/navigation";
 import { useUser } from '@clerk/nextjs';
 import { useEffect, useState } from 'react';
-import { db } from '@/firebase'; // Import your Firestore configuration
+import { db } from '@/utils/firebase'; // Import your Firestore configuration
 import { doc, updateDoc, setDoc, getDoc, onSnapshot, setLogLevel } from 'firebase/firestore';
 import Tooltip from '@mui/material/Tooltip';
 import { useThemeContext } from '@/app/toggle_theme/theme-context.js'; // Adjust path if needed

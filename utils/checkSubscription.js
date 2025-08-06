@@ -1,6 +1,7 @@
 //checking Subscription Status Before Accessing Premium Features:
 import { doc, getDoc } from 'firebase/firestore';
-import { db } from '@/firebase';
+//import { db } from '@/firebase';
+import { db } from '@/utils/firebase';
 
 export async function checkSubscription(userId) {
     if (!userId) return false; //lock in

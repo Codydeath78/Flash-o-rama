@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { db } from '@/firebase';
+import { db } from '@/utils/firebase';
 import { doc, updateDoc, getDoc } from 'firebase/firestore';
 import sendgrid from '@sendgrid/mail'; // Import SendGrid
 
