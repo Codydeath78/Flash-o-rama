@@ -97,6 +97,7 @@ useEffect(() => {
                 const colRef = collection(db,`cardstorage/${user.id}/cards`);
                  // Debug: Check Firestore instance and collection path
                 console.log("Firestore instance:", db);
+                console.log('Is db valid Firestore:', db instanceof Firestore); // Should be true
                 console.log("Collection path:", `cardstorage/${user.id}/cards`);
                 const querySnapshot = await getDocs(colRef);
 
@@ -147,6 +148,7 @@ useEffect(() => {
                 return;
             }
         const cardSetsQuery = collection(db,`cardstorage/${user.id}/cards`);
+        console.log('Is db valid Firestore:', db instanceof Firestore); // Should be true
         const cardSetsSnapshot = await getDocs(cardSetsQuery);
         const newSetCount = cardSetsSnapshot.size;
 

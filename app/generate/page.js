@@ -158,6 +158,7 @@ export default function Generate(){
           console.log("User ID:", user.id);
           const cardSetsQuery = collection(db,`cardstorage/${user.id}/cards`);
           console.log("Firestore instance:", db);
+          console.log('Is db valid Firestore:', db instanceof Firestore); // Should be true
           console.log("Collection path:", `cardstorage/${user.id}/cards`);
       
           const cardSetsSnapshot = await getDocs(cardSetsQuery);
@@ -189,6 +190,7 @@ export default function Generate(){
         }
         console.log(`Fetching from path: cardstorage/${user.id}/cards`);
         const cardSetsQuery = collection(db,`cardstorage/${user.id}/cards`);
+        console.log('Is db valid Firestore:', db instanceof Firestore); // Should be true
         const cardSetsSnapshot = await getDocs(cardSetsQuery);
         const currentSetCount = cardSetsSnapshot.size;  // Count existing sets
 
