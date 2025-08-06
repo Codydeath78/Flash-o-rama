@@ -1,5 +1,5 @@
 import sendgrid from '@sendgrid/mail';
-import { db } from '@/utils/firebase';
+import { db } from '@/firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import Stripe from "stripe";
 

@@ -1,10 +1,11 @@
 'use client';
+export const dynamic = 'force-dynamic'; // ⬅ force dynamic rendering
 import { useUser } from "@clerk/nextjs";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Suspense  } from "react";
 import { doc, getDoc } from "firebase/firestore"; // Import Firestore functions
-import { db } from '@/utils/firebase';
+import { db } from '@/firebase';
 import { useSearchParams, useRouter } from "next/navigation";
-import { Container, Typography, Box, CardActionArea, CardContent, Grid, Button } from '@mui/material';
+import { Container, Typography, Box, CardActionArea, CardContent, Grid, Button, CircularProgress } from '@mui/material';
 import { useThemeContext } from '@/app/toggle_theme/theme-context';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import { jsPDF } from 'jspdf';

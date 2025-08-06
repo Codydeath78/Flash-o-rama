@@ -1,7 +1,8 @@
-import {useUser} from '@clerk/nextjs';
+//import {useUser} from '@clerk/nextjs';
 //import {checkSubscription} from '@/check_subscription/checkSubscription';
 
 
+/*
 export default async function PremiumFeaturePage() {
     const {user} = useUser();
     const hasAccess = await checkSubscription(user?.id);
@@ -21,3 +22,4 @@ export default async function PremiumFeaturePage() {
         </div>
     );
 }
+*/

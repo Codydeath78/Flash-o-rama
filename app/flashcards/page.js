@@ -2,7 +2,7 @@
 import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import { collection, getDocs, doc, deleteDoc, updateDoc, increment, getDoc, setLogLevel, getFirestore, Firestore } from "firebase/firestore";
-import { db } from '@/utils/firebase';
+import { db } from '@/firebase';
 import { useRouter } from "next/navigation";
 import { Container, Grid, Card, CardActionArea, CardContent, Typography, TextField, CircularProgress, Button, Box } from '@mui/material';
 import { useThemeContext } from '@/app/toggle_theme/theme-context';

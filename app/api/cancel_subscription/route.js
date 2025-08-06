@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { db } from '@/utils/firebase';
+import { db } from '@/firebase';
 import { doc, updateDoc } from 'firebase/firestore';
 import sendCancellationEmail from '@/utils/sendCancelGrid'; // Utility to send email through SendGrid
 //API route

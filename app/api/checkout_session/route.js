@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { db } from '@/utils/firebase'; // Import your Firestore configuration
+import { db } from '@/firebase'; // Import your Firestore configuration
 import { doc, updateDoc, setDoc } from 'firebase/firestore';
 import { setLogLevel } from 'firebase/firestore';
 import { checkSubscription } from '@/app/check_subscription/page';
