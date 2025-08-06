@@ -3,7 +3,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '@/firebase';
 
 export async function checkSubscription(userId) {
-    if (!userId) return false;
+    if (!userId) return false; //fix?
 
     try {
         const userDocRef = doc(db, `cardstorage/${userId}`);
