@@ -1,3 +1,8 @@
+## DISCLAIMER
+
+DO NOT INPUT YOUR REAL CARD INFO IN CHECKOUT PAYMENT! 
+This application uses stripe's test mode for payment methods so I don't recommend inputting senitive details. If you want to test out the payment, use these test card numbers to simulate a payment. https://docs.stripe.com/testing
+
 ## WELCOME TO FLASH-O-RAMA
 
 In this SAAS application, you can create flashcards just by writing a prompt to AI and AI will do all the work by making flashcards so you can have study flashcards for exams, tests, or quizzes. In addition, this application isn't limited to an educational setting, you can use the AI to make any type of set of flashcards you desire to learn something new or explore subjects and ideas to further enhance your understanding of the world.

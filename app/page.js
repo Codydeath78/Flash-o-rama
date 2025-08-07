@@ -18,7 +18,7 @@ setLogLevel('debug');
 //hawk two: what?
 // hawk three: good moring!
 //hawk four: thats it!
-//readme works.
+//readme works I think!
 
 export default function Home() {
   const router = useRouter();
