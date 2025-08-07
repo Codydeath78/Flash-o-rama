@@ -11,8 +11,9 @@ import { db } from '@/firebase'; // Import your Firestore configuration
 import { doc, updateDoc, setDoc, getDoc, onSnapshot, setLogLevel } from 'firebase/firestore';
 import Tooltip from '@mui/material/Tooltip';
 import { useThemeContext } from '@/app/toggle_theme/theme-context.js'; // Adjust path if needed
-import { Brightness4, Brightness7} from '@mui/icons-material'; // Icons for dark mode toggle
+import { Brightness4, Brightness7, FlashOn, Star, Cancel, EmojiObjects, WorkspacePremium} from '@mui/icons-material'; // Icons for dark mode toggle
 import IconButton from '@mui/material/IconButton';
+import { motion } from 'framer-motion';
 setLogLevel('debug');
 //FRONTEND YES SIR!
 //hawk two: what?
@@ -302,20 +303,45 @@ export default function Home() {
       </AppBar>
 
       <Box sx={{ textAlign: 'center', my: 4 }}>
-        <Typography variant="h2" gutterBottom border="10px solid" borderRadius={2} borderColor={'grey.300'}>Welcome to Flash-o-rama</Typography>
+        <Box
+          sx={{
+          px: 4,
+          py: 2,
+          borderRadius: 3,
+          backdropFilter: 'blur(10px)',
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          border: '2px solid rgba(255, 255, 255, 0.2)',
+          boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+          display: 'inline-block',
+          mx: 'auto',
+          }}
+        >
+        <Typography variant="h2">Welcome to Flash-o-rama</Typography>
+        </Box>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
         <Typography variant="h5" gutterBottom>
           {''}
           The easiest way to make flashcards using AI!
         </Typography>
-        <Button variant="contained" color="primary" sx={{ mt: 2 }} onClick={handleButtonClickGeneratePage}>
+        <Button variant="contained" color="primary" startIcon={<FlashOn />}sx={{ mt: 2 }} onClick={handleButtonClickGeneratePage}>
           Get Started
         </Button>
+        </motion.div>
       </Box>
       
       <Box sx={{ my: 6 }}>
         <Typography variant="h4" gutterBottom textAlign="center">
           Features
         </Typography>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom textAlign="center" border="5px solid" borderRadius={2} borderColor={'grey.300'}>Easy Text Input</Typography>
@@ -339,10 +365,18 @@ export default function Home() {
             </Typography>
           </Grid>
         </Grid>
+        </motion.div>
+
       </Box>
 
       <Box sx={{ my: 6, textAlign: 'center' }}>
     <Typography variant="h4" gutterBottom textAlign="center">Manage Subscriptions</Typography>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+
     <Typography variant="h5" gutterBottom>You can cancel your Subscription anytime and anywhere! :o</Typography>
 
     {!isSignedIn ? (
@@ -376,21 +410,32 @@ export default function Home() {
                 : 'You currently have no active subscription. Subscribe today!'}
         </Typography>
     )}
+    
 
     <Button 
         variant="contained" 
-        color="primary" 
+        color="primary"
+        startIcon={<Cancel />}
         sx={{ mt: 2 }} 
         onClick={handleButtonClickCancel}
     >
         Cancel Subscription
     </Button>
+    </motion.div>
 </Box>
       <Box sx={{ my: 6, textAlign: 'center' }}>
         <Typography variant="h4" gutterBottom>Available Plans</Typography>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
-            <Box sx={{ p: 3, border: '10px solid', borderColor: 'grey.300', borderRadius: 2 }}>
+            <Box sx={{ p: 3, border: '10px solid', borderColor: 'grey.300', borderRadius: 2, backdropFilter: 'blur(10px)',
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    border: '2px solid rgba(255, 255, 255, 0.2)',
+    boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )', }}>
               <Typography variant="h5" gutterBottom>Basic</Typography>
               <Typography variant="h6" gutterBottom>$5 / month</Typography>
               <Typography>
@@ -408,7 +453,7 @@ export default function Home() {
                   disableHoverListener={!subscriptionActive} // Only show tooltip if the button is disabled
                 >
               <span>
-              <Button variant="contained" color="primary" sx={{ mt: 2 }} onClick={() => handleSubmit('basic')} disabled={subscriptionActive}>
+              <Button variant="contained" color="primary" startIcon={<EmojiObjects />} sx={{ mt: 2 }} onClick={() => handleSubmit('basic')} disabled={subscriptionActive}>
                 Choose Basic
               </Button>
                 </span>
@@ -416,7 +461,10 @@ export default function Home() {
             </Box>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box sx={{ p: 3, border: '10px solid', borderColor: 'grey.300', borderRadius: 2 }}>
+            <Box sx={{ p: 3, border: '10px solid', borderColor: 'grey.300', borderRadius: 2, backdropFilter: 'blur(10px)',
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    border: '2px solid rgba(255, 255, 255, 0.2)',
+    boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )', }}>
               <Typography variant="h5" gutterBottom>Pro</Typography>
               <Typography variant="h6" gutterBottom>$10 / month</Typography>
               <Typography>
@@ -434,7 +482,7 @@ export default function Home() {
                     disableHoverListener={!subscriptionActive} // Only show tooltip if the button is disabled
                   >
             <span>
-              <Button variant="contained" color="primary" sx={{ mt: 2 }} onClick={() => handleSubmit('pro')} disabled={subscriptionActive}>
+              <Button variant="contained" color="primary" startIcon={<WorkspacePremium />} sx={{ mt: 2 }} onClick={() => handleSubmit('pro')} disabled={subscriptionActive}>
                 Choose Pro
               </Button>
                 </span>
@@ -442,6 +490,7 @@ export default function Home() {
             </Box>
           </Grid>
         </Grid>
+        </motion.div>
       </Box>
     </Box>
     
