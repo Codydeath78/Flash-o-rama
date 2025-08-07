@@ -22,4 +22,4 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 console.log('Firestore instance:', db);
 
-export default {db}; //rg
+export {db}; //rg
